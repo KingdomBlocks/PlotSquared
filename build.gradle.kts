@@ -201,6 +201,7 @@ subprojects {
         shadowJar {
             this.archiveClassifier.set(null as String?)
             this.archiveFileName.set("${project.name}-${project.version}.${this.archiveExtension.getOrElse("jar")}")
+            this.destinationDirectory.set(file("$rootDir/../../bin/"))
         }
 
         named("build") {
